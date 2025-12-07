@@ -7,6 +7,14 @@ declare module "three/examples/jsm/controls/PointerLockControls" {
     isLocked: boolean;
     getObject(): any;
     getDirection(targetVec: any): any;
+    addEventListener(
+      type: "lock" | "unlock" | string,
+      listener: (event: any) => void
+    ): void;
+    removeEventListener(
+      type: "lock" | "unlock" | string,
+      listener: (event: any) => void
+    ): void;
     lock(): void;
     unlock(): void;
     dispose(): void;
